@@ -1,0 +1,46 @@
+{
+  "name": "cloud001_irisbackend",
+  "version": "1.0.0",
+  "description": "Proyecto creado para el reto IRIS Bank",
+  "main": "dist/application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/application",
+    "dev": "nodemon dist/application",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkevinp13/Cloud001_IrisBackend.git"
+  },
+  "keywords": [
+    "toDo"
+  ],
+  "author": "JhanKevinPeña",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "aws-sdk": "^2.1143.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "update": "^0.7.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.16.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.16",
+    "typescript": "^4.6.4"
+  },
+  "bugs": {
+    "url": "https://github.com/jkevinp13/Cloud001_IrisBackend/issues"
+  },
+  "homepage": "https://github.com/jkevinp13/Cloud001_IrisBackend#readme"
+}
