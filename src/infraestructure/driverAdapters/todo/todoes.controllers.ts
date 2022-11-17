@@ -47,10 +47,11 @@ export async function getToDoController(req: Request, res: Response) {
 export async function postToDoController(req: Request, res: Response) {
     const { body } = req;
     try {
-        const isCreatedToDo = await toDoesTable.createToDo(body);
-        if (isCreatedToDo) {
+        const idTodo = await toDoesTable.createToDo(body);
+        if (idTodo) {
             return res.status(200).json({
-                description: 'toDo creado exisotamente'
+                description: 'toDo creado exisotamente',
+                id: idTodo
             });
         } else {
             console.info('Error creando toDo');
