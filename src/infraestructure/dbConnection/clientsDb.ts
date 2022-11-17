@@ -41,7 +41,7 @@ export class ToDoesDb implements ToDoesRepository {
     }
   }
 
-  async createOrUpdateToDo(toDo: ToDo): Promise<boolean> {
+  async createOrUpdateToDo(toDo: ToDo): Promise<string> {
     if(!toDo.id){
       toDo.id = uuidv4();
     }
@@ -51,7 +51,7 @@ export class ToDoesDb implements ToDoesRepository {
     }
     try {
       await this.dynamoToDo.put(params).promise();
-      return true;
+      return toDo.id;
     } catch (error) {
       console.error('Error createOrUpdateToDo =>', error);
       throw new Error('Error base de datos');
